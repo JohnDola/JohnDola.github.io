@@ -1,3 +1,6 @@
 .TitleBar{
     background-color: whitesmoke;
+    position: fixed;
+    top: 0;
+    width: 100%;
 }
