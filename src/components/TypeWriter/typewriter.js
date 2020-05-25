@@ -75,28 +75,32 @@ const TypeWriter = (props) => {
 		};
 	};
 
-	let eightTabs = <span style={{ paddingLeft: '8em' }} />;
-	let twelveTabs = <span style={{ paddingLeft: '12em' }} />;
+	let sixTabs = <span style={{ paddingLeft: '6em' }} />;
+	let nineTabs = <span style={{ paddingLeft: '9em' }} />;
 
 	return (
 		<div className={classes.TypeWriter}>
 			<pre ref={typeWriter} className={classes.TypeWriterBody}>
 				<span className={classes.ConstHighlight}>const</span> object = {'{\n'}
-				{eightTabs}name: <span className={classes.StringHighlight}>'John Marco Dola'</span>, {'\n'}
-				{eightTabs}type: <span className={classes.StringHighlight}>'Full Stack Software Developer'</span>,{' '}
+				{sixTabs}name: <span className={classes.StringHighlight}>'John Marco Dola'</span>, {'\n'}
+				{sixTabs}type: <span className={classes.StringHighlight}>'Full Stack Software Developer'</span>,{' '}
 				{'\n'}
-				{eightTabs}location: <span className={classes.StringHighlight}>'Germany'</span>, {'\n'}
-				{eightTabs}skills:[ {'\n'}
-				{twelveTabs}
+				{sixTabs}location: <span className={classes.StringHighlight}>'Germany'</span>, {'\n'}
+				{sixTabs}skills:[ {'\n'}
+				{nineTabs}
 				<span className={classes.StringHighlight}>'Javascript/TypeScript'</span>,
 				{'\n'}
-				{twelveTabs}
+				{nineTabs}
 				<span className={classes.StringHighlight}>'React or Angular'</span>,
 				{'\n'}
-				{twelveTabs}
+				{nineTabs}
 				<span className={classes.StringHighlight}>'C#, Java or even nodeJS'</span>
 				{'\n'}
-				{twelveTabs}] {'\n};;'}
+				{nineTabs}
+				<span className={classes.StringHighlight}>'Clean Code'</span>
+				{'\n'}
+				{nineTabs}] {'\n};;'}
+
 			</pre>
 		</div>
 	);

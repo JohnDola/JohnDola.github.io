@@ -13,7 +13,7 @@
 .TypeWriterBody {
 	overflow-x: hidden;
 	text-align: justify;
-	font-size: 0.7em;
+	font-size: 0.8em;
     font-family: "Courier New";
 }
 
@@ -57,7 +57,7 @@
 
 @media (min-width: 768px) {
     .TypeWriterBody {
-        font-size: 1.5em;
+        font-size: 1.2em;
 
     }
 
@@ -68,7 +68,7 @@
 
 @media (min-width: 992px) {
     .TypeWriterBody {
-        font-size: 2em;
+        font-size: 1.5em;
 
     }
 
@@ -78,6 +78,17 @@
 }
 
 @media (min-width: 1200px) {
+    .TypeWriterBody {
+        font-size: 2em;
+
+    }
+
+    .TypeWriter {
+        padding: 30px;
+    }
+}
+
+@media (min-width: 1400px) {
     .TypeWriterBody {
         font-size: 2.5em;
 
@@ -95,17 +106,6 @@
     }
 
     .TypeWriter {
-        padding: 30px;
-    }
-}
-
-@media (min-width: 1400px) {
-    .TypeWriterBody {
-        font-size: 3.5em;
-
-    }
-
-    .TypeWriter {
         padding: 20px;
     }
 }
@@ -113,7 +113,7 @@
 
 @media (min-width: 1900px) {
     .TypeWriterBody {
-        font-size: 4em;
+        font-size: 3.5em;
     }
 
     .TypeWriter {
