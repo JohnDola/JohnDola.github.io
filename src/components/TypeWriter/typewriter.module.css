@@ -3,10 +3,11 @@
 }
 
 .StringHighlight {
-    color: rgba(253, 149, 90, 0.8);
+    color: rgb(253, 150, 90);
 }
 
 .TypeWriter {
+	font-weight: bold;
 	padding: 10px;
 }
 
@@ -53,12 +54,15 @@
 }
 
 
-
+@media (max-width: 430px) {
+    .TypeWriterBody {
+       margin-top: 45%
+	}
+}
 
 @media (min-width: 768px) {
     .TypeWriterBody {
         font-size: 1.2em;
-
     }
 
     .TypeWriter {

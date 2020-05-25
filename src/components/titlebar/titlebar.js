@@ -9,7 +9,8 @@ const TitleBar = (props) => {
 	return (
 		<Navbar expand="lg" className={classes.TitleBar}>
 			<Navbar.Brand href="#home">
-				<img alt="" src={logo} width="30" height="30" className="d-inline-block align-top TitleBar" />{' '}
+				<img alt="" src={logo} width="30" height="30" className="d-inline-block align-top TitleBar" />
+				<span style={{marginLeft:'15px'}}>Dola Software Productions</span>
 			</Navbar.Brand>
 			<Navbar.Toggle aria-controls="basic-navbar-nav" />
 			<Navbar.Collapse id="basic-navbar-nav">
