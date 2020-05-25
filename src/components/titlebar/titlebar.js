@@ -26,7 +26,7 @@ const TitleBar = (props) => {
 					</Nav.Link>
 				</Nav.Item>
 				<Nav.Item>
-					<Nav.Link href="https://https://www.xing.com/profile/JohnMarco_Dola/cv">
+					<Nav.Link href="https://www.xing.com/profile/JohnMarco_Dola/cv">
 						<FontAwesomeIcon size={iconSize} icon={[ 'fab', 'xing' ]} />
 					</Nav.Link>
 				</Nav.Item>
