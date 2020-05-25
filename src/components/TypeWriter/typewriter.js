@@ -2,11 +2,11 @@ import React, { useRef, useEffect } from 'react';
 import classes from './typewriter.module.css';
 const TypeWriter = (props) => {
 	const typeWriter = useRef(null);
+
 	useEffect(() => {
 		const typeWriter2 = setupTypewriter(typeWriter.current);
-
 		typeWriter2.type();
-	});
+	}, []);
 	const setupTypewriter = (t) => {
 		var HTML = t.innerHTML;
 
@@ -65,6 +65,8 @@ const TypeWriter = (props) => {
 			cursorPosition += 1;
 			if (cursorPosition < HTML.length - 1) {
 				setTimeout(type, tempTypeSpeed);
+			} else {
+				props.invokeSetIsReady();
 			}
 		};
 
@@ -72,20 +74,29 @@ const TypeWriter = (props) => {
 			type: type
 		};
 	};
-	
+
+	let eightTabs = <span style={{ paddingLeft: '8em' }} />;
+	let twelveTabs = <span style={{ paddingLeft: '12em' }} />;
 
 	return (
-		<div>
-			<pre ref={typeWriter} className={classes.TypeWriter}>
-				{
-				`<span className={classes.ConstHighlight}>var</span> object = {'{'} 
-				name: <span className={classes.StringHighlight}>'John Marco Dola'</span>`}
-				{/* type:  <span className={classes.StringHighlight}>'Full Stack Software Developer'</span>,
-				 location: <span className={classes.StringHighlight}>'Germany'</span>, 
-				 properties:[<span className={classes.StringHighlight}>'Javascript'</span>,
-				<span className={classes.StringHighlight}>'HTML'</span>,
-				<span className={classes.StringHighlight}>'CSS'</span>] {'}'} ; */}
-				
+		<div className={classes.TypeWriter}>
+			<pre ref={typeWriter} className={classes.TypeWriterBody}>
+				<span className={classes.ConstHighlight}>const</span> object = {'{\n'}
+				{eightTabs}name: <span className={classes.StringHighlight}>'John Marco Dola'</span>, {'\n'}
+				{eightTabs}type: <span className={classes.StringHighlight}>'Full Stack Software Developer'</span>,{' '}
+				{'\n'}
+				{eightTabs}location: <span className={classes.StringHighlight}>'Germany'</span>, {'\n'}
+				{eightTabs}skills:[ {'\n'}
+				{twelveTabs}
+				<span className={classes.StringHighlight}>'Javascript/TypeScript'</span>,
+				{'\n'}
+				{twelveTabs}
+				<span className={classes.StringHighlight}>'React or Angular'</span>,
+				{'\n'}
+				{twelveTabs}
+				<span className={classes.StringHighlight}>'C#, Java or even nodeJS'</span>
+				{'\n'}
+				{twelveTabs}] {'\n};;'}
 			</pre>
 		</div>
 	);

@@ -1,35 +1,132 @@
-
-.ConstHighlight{
-	color: #C0AD60;
-}
-.StringHighlight{
-	color: rgba(253, 149, 90, 0.8);
+.ConstHighlight {
+    color: #C0AD60;
 }
 
-.TypeWriter{
-	text-align: justify;
-	font-size: 2em;
-	margin: 0;
-	font-family: "Courier New";
-
+.StringHighlight {
+    color: rgba(253, 149, 90, 0.8);
 }
 
-.TypeWriter::after{
-		content: "|";
-		animation: blink 500ms linear infinite alternate;
+.TypeWriter {
+    padding: 10px;
 }
 
-@-webkit-keyframes blink{
-	0%{opacity: 0;}
-	100%{opacity: 1;}
+.TypeWriterBody {
+    text-align: justify;
+    font-size: 1em;
+    font-family: "Courier New";
 }
 
-@-moz-keyframes blink{
-	0%{opacity: 0;}
-	100%{opacity: 1;}
+.TypeWriterBody::after {
+    content: "|";
+    animation: blink 500ms linear infinite alternate;
 }
 
-@keyframes blink{
-	0%{opacity: 0;}
-	100%{opacity: 1;}
+@-webkit-keyframes blink {
+    0% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 1;
+    }
+}
+
+@-moz-keyframes blink {
+    0% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 1;
+    }
+}
+
+@keyframes blink {
+    0% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 1;
+    }
+}
+
+
+
+
+@media (min-width: 768px) {
+    .TypeWriterBody {
+        font-size: 1.5em;
+
+    }
+
+    .TypeWriter {
+        padding: 15px;
+    }
+}
+
+@media (min-width: 992px) {
+    .TypeWriterBody {
+        font-size: 2em;
+
+    }
+
+    .TypeWriter {
+        padding: 20px;
+    }
+}
+
+@media (min-width: 1200px) {
+    .TypeWriterBody {
+        font-size: 2.5em;
+
+    }
+
+    .TypeWriter {
+        padding: 30px;
+    }
+}
+
+@media (min-width: 1400px) {
+    .TypeWriterBody {
+        font-size: 3em;
+
+    }
+
+    .TypeWriter {
+        padding: 30px;
+    }
+}
+
+@media (min-width: 1400px) {
+    .TypeWriterBody {
+        font-size: 3.5em;
+
+    }
+
+    .TypeWriter {
+        padding: 20px;
+    }
+}
+
+
+@media (min-width: 1900px) {
+    .TypeWriterBody {
+        font-size: 4em;
+    }
+
+    .TypeWriter {
+        padding: 25px;
+    }
+}
+
+@media (min-width: 2400px) {
+    .TypeWriterBody {
+        font-size: 5em;
+
+    }
+
+    .TypeWriter {
+        padding: 40px;
+    }
 }
