@@ -4,10 +4,6 @@
     background-color: whitesmoke;
 }
 
-.ScrollPage:first-child {
-    padding-top: 60px;
-}
-
 .ScrollPage:nth-child(2n+1) {
     background-color: #555555;
     color: whitesmoke
