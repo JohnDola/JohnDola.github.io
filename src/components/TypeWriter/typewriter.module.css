@@ -7,10 +7,11 @@
 }
 
 .TypeWriter {
-    padding: 10px;
+	padding: 10px;
 }
 
 .TypeWriterBody {
+	overflow-x: hidden;
     text-align: justify;
 	font-size: 0.9em;
     font-family: "Courier New";

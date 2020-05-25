@@ -6,8 +6,11 @@ const ScrollButton = (props) => {
     if(props.isTypeWriteActive){
         return null;
     }
+    const clicked = () => {
+        console.log('clicked')
+    }
 	return (
-		<div >
+		<div onClick={clicked}>
 			<div className={[ classes.Arrow, classes.ArrowFirst ].join(' ')} />
 			<div className={[ classes.Arrow, classes.ArrowSecond ].join(' ')} />
 		</div>

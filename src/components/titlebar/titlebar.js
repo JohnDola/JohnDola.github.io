@@ -7,10 +7,12 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 const TitleBar = (props) => {
 	const iconSize = '2x';
 	return (
-		<Navbar className={classes.TitleBar}>
+		<Navbar expand="lg" className={classes.TitleBar}>
 			<Navbar.Brand href="#home">
 				<img alt="" src={logo} width="30" height="30" className="d-inline-block align-top TitleBar" />{' '}
 			</Navbar.Brand>
+			<Navbar.Toggle aria-controls="basic-navbar-nav" />
+			<Navbar.Collapse id="basic-navbar-nav">
 			<Nav>
 				<Nav.Link href="#aboutme">About me</Nav.Link>
 				<Nav.Link href="#refrences">References</Nav.Link>
@@ -29,6 +31,7 @@ const TitleBar = (props) => {
 					</Nav.Link>
 				</Nav.Item>
 			</Nav>
+			</Navbar.Collapse>
 		</Navbar>
 	);
 };

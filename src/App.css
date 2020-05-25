@@ -5,5 +5,16 @@
 }
 
 section:first-of-type{
-  padding-top:60px;
+  padding-top:120px;
+}
+
+@media (min-width: 768px) {
+  .TypeWriterBody {
+      font-size: 1.5em;
+
+  }
+
+  .TypeWriter {
+      padding: 15px;
+  }
 }
