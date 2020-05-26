@@ -1,8 +1,8 @@
-import React from 'react';
-import { Navbar, Nav } from 'react-bootstrap';
-import classes from './titlebar.module.css';
-import logo from '../../asset/img/d-icon32.png';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import React from 'react';
+import { Nav, Navbar } from 'react-bootstrap';
+import logo from '../../asset/img/d-icon32.png';
+import classes from './TitleBar.module.css';
 
 const TitleBar = (props) => {
 	const iconSize = '2x';

@@ -1,5 +1,5 @@
-import React, { useRef, useEffect } from 'react';
-import classes from './typewriter.module.css';
+import React, { useEffect, useRef } from 'react';
+import classes from './TypeWriter.module.css';
 const TypeWriter = (props) => {
 	const typeWriter = useRef(null);
 

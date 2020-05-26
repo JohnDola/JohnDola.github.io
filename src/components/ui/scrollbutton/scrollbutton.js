@@ -1,5 +1,5 @@
 import React from 'react';
-import classes from './scrollbutton.module.css';
+import classes from './ScrollButton.module.css';
 
 const ScrollButton = (props) => {
     console.log(props.isTypeWriteActive)
