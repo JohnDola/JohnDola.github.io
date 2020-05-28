@@ -1,25 +1,16 @@
-import React, { useState } from "react";
+import React from "react";
 import ScrollPage from '../../components/ScrollPage/ScrollPage';
 import TitleBar from '../../components/TitleBar/TitleBar';
-import TypeWriter from '../../components/TypeWriter/TypeWriter';
-import ScrollButton from '../../components/ui/ScrollButton/ScrollButton';
-const WebSiteView = (props) => {
+import classes from './WebSiteView.module.css';
 
-    const [disableScrollButton, setDisableScrollButton] = useState(true)
-    const setIsReady = () => {
-        setDisableScrollButton(false);
-    }
-    
+const WebSiteView = (props) => {
+  console.log(classes)
   return (
-    <React.Fragment>
+    <div className={classes.WebSiteView}>
       <TitleBar />
       <ScrollPage>
-        <TypeWriter invokeSetIsReady={setIsReady} />
-        <ScrollButton isTypeWriteActive={disableScrollButton}></ScrollButton>
       </ScrollPage>
-      <ScrollPage>2</ScrollPage>
-      <ScrollPage>3</ScrollPage>
-    </React.Fragment>
+    </div>
   );
 };
 

@@ -1,6 +1,5 @@
 import { library } from "@fortawesome/fontawesome-svg-core";
 import { fab } from "@fortawesome/free-brands-svg-icons";
-import "bootstrap/dist/css/bootstrap.min.css";
 import React from "react";
 import "./App.css";
 import WebSiteView from "./container/WebSiteView/WebSiteView";

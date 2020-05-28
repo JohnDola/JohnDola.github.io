@@ -1,0 +1,11 @@
+.WebSiteView {
+    padding: 25px 0;
+    box-shadow:  0 15px rgba(0,0,0,.06)
+}
+
+@media only screen and (min-width: 1240px){
+
+    .WebSiteView {
+        padding: 25px;
+    }
+}
