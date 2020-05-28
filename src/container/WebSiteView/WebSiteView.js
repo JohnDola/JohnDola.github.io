@@ -1,15 +1,17 @@
 import React from "react";
-import ScrollPage from '../../components/ScrollPage/ScrollPage';
+import AboutMe from '../../components/AboutMe/AboutMe';
 import TitleBar from '../../components/TitleBar/TitleBar';
 import classes from './WebSiteView.module.css';
+import MySkills from "../../components/MySkills/MySkills";
 
 const WebSiteView = (props) => {
-  console.log(classes)
+
   return (
     <div className={classes.WebSiteView}>
       <TitleBar />
-      <ScrollPage>
-      </ScrollPage>
+      <AboutMe>
+        </AboutMe>
+        <MySkills></MySkills>
     </div>
   );
 };

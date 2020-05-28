@@ -1,18 +1,14 @@
 .App {
-  text-align: center;
-  font-family: 'Righteous', cursive;
+  font-family: "Roboto", Arial, Tahoma, sans-serif
   
+}
+
+h2{
+  font-family: "Lato", Arial, Tahoma, sans-serif;
 }
 
 body{
   background-color: #FCFCFC;
-}
-
-
-
-
-section:first-of-type{
-  padding-top:60px;
 }
 
 @media (min-width: 768px) {

@@ -1,4 +1,18 @@
+@media only screen and (max-width: 959px) and (min-width: 768px){
+    .WebSiteView {
+        max-width: 728px;
+    }
+}
+@media only screen and (max-width: 767px){
+    WebSiteView {
+        max-width: 90%;
+        max-width: calc(100% - 67px);
+    }
+}
+
 .WebSiteView {
+    margin: 0 auto;
+    overflow: hidden;
     padding: 25px 0;
     box-shadow:  0 15px rgba(0,0,0,.06)
 }
@@ -7,5 +21,6 @@
 
     .WebSiteView {
         padding: 25px;
+        max-width: 1240px;
     }
 }

@@ -1,19 +1,94 @@
-.TitleBar{
+.TitleBar {
     background-color: #fff;
-    position: relative;
+    position: sticky;
+    z-index: 741;
     top: 0;
     width: 100%;
-	border-bottom: 1px solid gray;
-	box-shadow: 0 0 15px rgba(0,0,0,.06);
+    border-bottom: 1px solid gray;
+    box-shadow: 0 0 15px rgba(0, 0, 0, .06);
+    height: 80px
 }
-.TitleBar ul{
 
-	margin:0;
-	padding: 20px 10px;
+.TitleBar ul {
+    margin: 0;
 }
-.TitleBar  li {
-	text-decoration: none;
-	list-style-type: none;
-	display:inline-block;
-	margin: 10px 20px;
+
+.TitleBar li {
+    text-decoration: none;
+    padding: 18px 30px;
+    list-style-type: none;
+    margin: 12px 10px;
+    overflow: auto;
+    float: left;
+    border-right: 1px solid;
+    border-color: rgba(0, 0, 0, .05);
 }
+
+.TitleBar li:last-child {
+    border: none;
+}
+
+.TitleBar li a {
+    text-decoration: none;
+    color: black;
+
+}
+
+.TitleBar li a:hover,
+.TitleBar li a:active {
+    color: grey;
+
+}
+
+
+.TitleBar img {
+    display: inline-block;
+    padding: 20px;
+    float: left;
+}
+
+.TitleBar>li>a span {
+    display: block;
+    line-height: 60px;
+    padding: 0 20px;
+    z-index: 701;
+    white-space: nowrap;
+    border-right-width: 1px;
+    border-style: solid;
+    border-top-style: solid;
+    border-right-style: solid;
+    border-bottom-style: solid;
+    border-left-style: solid;
+}
+
+
+@media only screen and (min-width: 1240px) {
+    .TitleBar.sticky {
+        position: fixed;
+        width: 100%;
+        left: 0;
+        top: 0px;
+        height: 80px;
+        z-index: 701;
+        background: #fff;
+        opacity: .80;
+        -webkit-box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.1);
+        -moz-box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.1);
+        box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.0.5);
+    }
+}
+
+
+.FadeIn {
+	width: 100px;
+	height: 100px;
+	background-color: red;
+	position: relative;
+	animation-name: FadeIn;
+	animation-duration: 0.7s;
+  }
+  
+  @keyframes FadeIn {
+	0%   {top:-80px;}
+	100%  { top:0px;}
+  }
