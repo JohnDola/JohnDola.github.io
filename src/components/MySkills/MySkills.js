@@ -1,6 +1,6 @@
-import React, {useEffect, useState} from 'react';
+import React from 'react';
 import classes from './MySkills.module.css';
-
+import SubTitle from '../ui/SubTitle/Subtitle'
 const MySkills = (props) => {
     const skillList = [
         {name:'JavaScript', percentage: 100},
@@ -17,6 +17,7 @@ const MySkills = (props) => {
 
 	return (
 		<div className={classes.MySkills} >
+      <SubTitle >My skills</SubTitle>
 			{skillList.map((skill,index) => {
                return <p key={index}>{skill.name}: {skill.percentage} %</p> 
             })}

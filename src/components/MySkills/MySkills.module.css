@@ -1,3 +1,7 @@
 .MySkills{
-    
+    position: relative;
+    z-index: 200;
+    background-color: tomato;
+    padding: 50px 0 40px 0 ;
+    background-color:#dbc596;
 }

@@ -1,7 +1,7 @@
 .AboutMe {
     position: relative;
     background-color: whitesmoke;
-    padding: 100px 0 60px 0;
+    padding: 80px 0 60px 0;
     background-color: #373737;
 }
 
@@ -32,8 +32,11 @@
     font-size: 30px;
     line-height: 30px;
     font-weight: 300;
-    margin-bottom: 30px;
+    margin: 3px 0 30px 0;
+    font-weight: lighter;
     color: #EDEDED;
+    font-family: "Lato", Arial, Tahoma, sans-serif;
+
 }
 
 .AboutMe img{

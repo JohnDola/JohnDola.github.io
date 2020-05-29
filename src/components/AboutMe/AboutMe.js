@@ -1,5 +1,6 @@
 import React from 'react';
 import classes from './AboutMe.module.css';
+import SubTitle from '../ui/SubTitle/Subtitle';
 const AboutMe = (props) => (
 	<section className={classes.AboutMe}>
 		{/* TODO <img></img> */}
