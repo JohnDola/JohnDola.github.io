@@ -11,10 +11,15 @@ const TitleBar = (props) => {
 	}, []);
 
 	const scrollTo = (elementId) => {
+		if(elementId === '#aboutme'){
+			window.scrollTo(0,0);
+			return;
+		}
 		const element = document.getElementById(elementId);
 		if (!element) {
 			return;
 		}
+		
 		element.scrollIntoView();
 	};
 
