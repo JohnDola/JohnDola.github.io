@@ -2,7 +2,7 @@ import React from 'react';
 import classes from './AboutMe.module.css';
 import SubTitle from '../ui/SubTitle/Subtitle';
 const AboutMe = (props) => (
-	<section className={classes.AboutMe}>
+	<section id="#aboutme" className={classes.AboutMe}>
 		{/* TODO <img></img> */}
         <img className={ classes.ScrollPictureAnimation} src="https://themes.muffingroup.com/be/resume/wp-content/uploads/2015/03/daniel-petterson.png"></img>
 		<div className={classes.JohnDola}>
