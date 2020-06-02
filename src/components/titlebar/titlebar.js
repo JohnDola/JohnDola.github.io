@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import logo from '../../asset/img/d-icon32.png';
 import classes from './TitleBar.module.css';
+import {sectionTitles, ESection} from '../../common/sectionTitles';
 
 const TitleBar = (props) => {
 	const [ isTransparentTitleBar, setisTransparentTitleBar ] = useState(false);
@@ -11,7 +12,7 @@ const TitleBar = (props) => {
 	}, []);
 
 	const scrollTo = (elementId) => {
-		if(elementId === '#aboutme'){
+		if(elementId === ESection.aboutme){
 			window.scrollTo(0,0);
 			return;
 		}
@@ -23,15 +24,7 @@ const TitleBar = (props) => {
 		element.scrollIntoView();
 	};
 
-	const titles = [
-		{ name: 'About Me', hash: '#aboutme' },
-		{ name: 'My Skills', hash: '#myskills' },
-		{ name: 'Experience', hash: '#experience' },
-		{ name: 'Portfolio', hash: '#portfolio' },
-		{ name: 'Education', hash: '#education' },
-		{ name: 'Contact', hash: '#contact' }
-	];
-	const titleEntries = titles.map(({ name, hash }, index) => {
+	const titleEntries = sectionTitles.map(({ name, hash }, index) => {
 		return (
 			<li>
 				<a key={index} href={hash} onClick={() => scrollTo(hash)}>
@@ -42,7 +35,7 @@ const TitleBar = (props) => {
 	});
 
 	return (
-		<div id="#titleBar" className={classes.TitleBar}>
+		<div className={classes.TitleBar}>
 			<div className={classes.TitleBar}>
 				<img src={logo} alt="logo not found" />
 				<ul>{titleEntries}</ul>
