@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import logo from '../../asset/img/d-icon32.png';
 import classes from './TitleBar.module.css';
-import {sectionTitles, ESection} from '../../common/sectionTitles';
+import { sectionTitles, ESection } from '../../common/sectionTitles';
 
 const TitleBar = (props) => {
 	const [ isTransparentTitleBar, setisTransparentTitleBar ] = useState(false);
@@ -12,15 +12,15 @@ const TitleBar = (props) => {
 	}, []);
 
 	const scrollTo = (elementId) => {
-		if(elementId === ESection.aboutme){
-			window.scrollTo(0,0);
+		if (elementId === ESection.aboutme) {
+			window.scrollTo(0, 0);
 			return;
 		}
 		const element = document.getElementById(elementId);
 		if (!element) {
 			return;
 		}
-		
+
 		element.scrollIntoView();
 	};
 
@@ -33,21 +33,19 @@ const TitleBar = (props) => {
 			</li>
 		);
 	});
-
+	const classList = [ classes.TitleBar, classes.Sticky, isTransparentTitleBar ? classes.FadeIn : null ].join(' ');
 	return (
 		<div className={classes.TitleBar}>
 			<div className={classes.TitleBar}>
 				<img src={logo} alt="logo not found" />
 				<ul>{titleEntries}</ul>
 			</div>
-			<div
-				style={{ visibility: isTransparentTitleBar ? 'visible' : 'hidden' }}
-				className={[ classes.TitleBar, classes.Sticky, isTransparentTitleBar ? classes.FadeIn : null ].join(
-					' '
-				)}
-			>
-				<img src={logo} alt="logo not found" />
-				<ul>{titleEntries}</ul>
+			<div style={{ visibility: isTransparentTitleBar ? 'visible' : 'hidden' }} className={classList}>
+				<ul>
+					<img src={logo} alt="logo not found" />
+
+					{titleEntries}
+				</ul>
 			</div>
 		</div>
 	);

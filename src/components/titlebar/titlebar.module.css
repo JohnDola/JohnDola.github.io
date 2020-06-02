@@ -63,7 +63,7 @@
 
 .TitleBar.Sticky {
     display: none;
-    height:79px;
+    height: 79px;
 }
 
 @media only screen and (min-width: 1240px) {
@@ -74,8 +74,8 @@
         width: 100%;
         left: 0;
         top: 0px;
-        height: 80px;
-        z-index: 701;
+        height: 70px;
+        z-index: 7012;
         background: #fff;
         opacity: .80;
         -webkit-box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.1);
@@ -83,16 +83,49 @@
         box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.0.5);
     }
 
+    .Sticky ul {
+        max-width: 1240px;
+        padding: 0;
+        margin: auto;
+    }
+
+    .Sticky li {
+        position: relative;
+        padding: 15px 30px;
+    }
+
+    .Sticky img {
+        padding: 20px 30px;
+    }
 }
-.FadeIn{
+
+@media only screen and (max-width: 959px) and (min-width: 768px) {
+    .Sticky ul {
+        max-width: 728px;
+    }
+}
+
+@media only screen and (max-width: 767px) {
+    .Sticky ul {
+        max-width: 90%;
+        max-width: calc(100% - 67px);
+    }
+}
+
+.FadeIn {
     width: 101px;
     height: 100px;
     position: relative;
     animation-name: FadeIn;
     animation-duration: 0.7s;
 }
-  
-  @keyframes FadeIn {
-	0%   {top:-80px;}
-	100%  { top:0px;}
-  }
+
+@keyframes FadeIn {
+    0% {
+        top: -80px;
+    }
+
+    100% {
+        top: 0px;
+    }
+}

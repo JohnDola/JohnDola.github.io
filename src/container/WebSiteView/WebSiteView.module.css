@@ -4,7 +4,7 @@
     }
 }
 @media only screen and (max-width: 767px){
-    WebSiteView {
+    .WebSiteView {
         max-width: 90%;
         max-width: calc(100% - 67px);
     }
