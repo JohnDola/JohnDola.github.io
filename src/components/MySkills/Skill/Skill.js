@@ -1,16 +1,16 @@
 import React, { useState, useEffect } from 'react';
 import classes from './Skill.module.css';
-import { ESection } from '../../../common/sectionTitles';
 const Skill = ({ name, percentage }) => {
 	let [ delayedPercentage, setDelayedPercentage ] = useState(0);
 
 	useEffect(() => {
+    if (document.documentElement.clientHeight > 1100) {
+      setDelayedPercentage(percentage);
+    }
 		window.addEventListener('scroll', () => {
 			if (document.documentElement.scrollTop > 100) {
 				setDelayedPercentage(percentage);
-			} else {
-				setDelayedPercentage(0);
-			}
+			} 
 		});
 	}, []);
 	return (

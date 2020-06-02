@@ -31,13 +31,11 @@
 .TitleBar li a {
     text-decoration: none;
     color: black;
-
 }
 
 .TitleBar li a:hover,
 .TitleBar li a:active {
     color: grey;
-
 }
 
 
