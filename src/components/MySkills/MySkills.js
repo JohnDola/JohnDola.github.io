@@ -1,6 +1,7 @@
 import React from 'react';
+import SubTitle from '../ui/SubTitle/Subtitle';
 import classes from './MySkills.module.css';
-import SubTitle from '../ui/SubTitle/Subtitle'
+import Skill from './Skill/Skill';
 const MySkills = (props) => {
     const skillList = [
         {name:'JavaScript', percentage: 100},
@@ -18,9 +19,12 @@ const MySkills = (props) => {
 	return (
 		<div className={classes.MySkills} >
       <SubTitle >My skills</SubTitle>
-			{skillList.map((skill,index) => {
-               return <p key={index}>{skill.name}: {skill.percentage} %</p> 
+      <div className={classes.SkillList}>
+      {skillList.map((skill,index) => {
+               return <Skill key={index} {...skill}></Skill> 
             })}
+      </div>
+			
 		</div>
 	);
 };
