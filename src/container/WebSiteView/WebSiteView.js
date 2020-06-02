@@ -3,6 +3,7 @@ import AboutMe from '../../components/AboutMe/AboutMe';
 import MySkills from "../../components/MySkills/MySkills";
 import TitleBar from '../../components/TitleBar/TitleBar';
 import classes from './WebSiteView.module.css';
+import Experience from "../../components/Experience/Experience";
 
 const WebSiteView = (props) => {
 
@@ -12,6 +13,7 @@ const WebSiteView = (props) => {
       <AboutMe>
         </AboutMe>
         <MySkills></MySkills>
+        <Experience></Experience>
     </div>
   );
 };

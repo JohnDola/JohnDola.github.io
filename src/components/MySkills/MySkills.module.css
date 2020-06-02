@@ -1,14 +1,14 @@
-.MySkills{
+.MySkills {
 
     position: relative;
     z-index: 200;
     background-color: tomato;
-    padding: 55px 0 40px 0 ;
-    background-color:#dbc596;
+    padding: 55px 0 40px 0;
+    background-color: #dbc596;
 }
 
-.SkillList{
-    display:flex;
+.SkillList {
+    display: flex;
     flex-wrap: wrap;
     justify-content: space-around;
 }

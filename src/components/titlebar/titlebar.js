@@ -3,17 +3,10 @@ import logo from '../../asset/img/d-icon32.png';
 import classes from './TitleBar.module.css';
 
 const TitleBar = (props) => {
-	const [ activeClasses, setActiveClasses ] = useState(classes.TitleBar);
-
+	const [ isTransparentTitleBar, setisTransparentTitleBar ] = useState(false);
 	useEffect(() => {
 		window.addEventListener('scroll', () => {
-			console.log(window.scrollY);
-			const activeClassList = [ classes.TitleBar ];
-			if (window.scrollY >= 100) {
-				activeClassList.push(classes.sticky);
-				activeClassList.push(classes.FadeIn);
-			}
-			setActiveClasses(activeClassList.join(' '));
+			setisTransparentTitleBar(window.scrollY >= 100);
 		});
 	}, []);
 
@@ -22,11 +15,7 @@ const TitleBar = (props) => {
 		if (!element) {
 			return;
 		}
-		window.scroll({
-			behavior: 'smooth',
-			left: 0,
-			top: element.offsetTop
-		});
+		element.scrollIntoView();
 	};
 
 	const titles = [
@@ -37,7 +26,7 @@ const TitleBar = (props) => {
 		{ name: 'Education', hash: '#education' },
 		{ name: 'Contact', hash: '#contact' }
 	];
-	const titleEntries = titles.map(({name,hash}, index) => {
+	const titleEntries = titles.map(({ name, hash }, index) => {
 		return (
 			<li>
 				<a key={index} href={hash} onClick={() => scrollTo(hash)}>
@@ -46,12 +35,22 @@ const TitleBar = (props) => {
 			</li>
 		);
 	});
-	console.log(titleEntries);
 
 	return (
-		<div className={activeClasses}>
-			<img src={logo} alt="logo not found" />
-			<ul>{titleEntries}</ul>
+		<div id="#titleBar" className={classes.TitleBar}>
+			<div className={classes.TitleBar}>
+				<img src={logo} alt="logo not found" />
+				<ul>{titleEntries}</ul>
+			</div>
+			<div
+				style={{ visibility: isTransparentTitleBar ? 'visible' : 'hidden' }}
+				className={[ classes.TitleBar, classes.Sticky, isTransparentTitleBar ? classes.FadeIn : null ].join(
+					' '
+				)}
+			>
+				<img src={logo} alt="logo not found" />
+				<ul>{titleEntries}</ul>
+			</div>
 		</div>
 	);
 };

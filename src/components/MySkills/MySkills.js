@@ -17,9 +17,9 @@ const MySkills = (props) => {
 
 
 	return (
-		<div  className={classes.MySkills} >
+		<div  id="#myskills"  className={classes.MySkills} >
       <SubTitle >My skills</SubTitle>
-      <div id="#myskills" className={classes.SkillList}>
+      <div  className={classes.SkillList}>
       {skillList.map((skill,index) => {
                return <Skill key={index} {...skill}></Skill> 
             })}

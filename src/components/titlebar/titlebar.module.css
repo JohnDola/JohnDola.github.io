@@ -61,9 +61,15 @@
     border-left-style: solid;
 }
 
+.TitleBar.Sticky {
+    display: none;
+    height:79px;
+}
 
 @media only screen and (min-width: 1240px) {
-    .TitleBar.sticky {
+    .TitleBar.Sticky {
+        display: block;
+        visibility: visible;
         position: fixed;
         width: 100%;
         left: 0;
@@ -76,17 +82,15 @@
         -moz-sbox-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.1);
         box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.0.5);
     }
+
 }
-
-
-.FadeIn {
-	width: 100px;
-	height: 100px;
-	background-color: red;
-	position: relative;
-	animation-name: FadeIn;
-	animation-duration: 0.7s;
-  }
+.FadeIn{
+    width: 101px;
+    height: 100px;
+    position: relative;
+    animation-name: FadeIn;
+    animation-duration: 0.7s;
+}
   
   @keyframes FadeIn {
 	0%   {top:-80px;}
