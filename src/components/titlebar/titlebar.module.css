@@ -7,6 +7,36 @@
     height: 100px
 }
 
+.HamburgerMenu {
+    position: absolute;
+    right: 40px;
+    top: 28px;
+    cursor: pointer;
+}
+
+.HamburgerMenu div {
+    width: 34px;
+    height: 5px;
+    background-color: black;
+    margin: 6px 0;
+    transition: 0.4s;
+}
+
+.Change .Bar1 {
+    -webkit-transform: rotate(-45deg) translate(-9px, 6px);
+    transform: rotate(-45deg) translate(-9px, 6px);
+}
+
+.Change .Bar2 {
+    opacity: 0;
+}
+
+.Change .Bar3 {
+    -webkit-transform: rotate(45deg) translate(-8px, -6px);
+    transform: rotate(45deg)  translate(-8px, -6px)
+}
+
+
 .TitleBar ul {
     margin: 0;
 }
@@ -43,19 +73,6 @@
     float: left;
 }
 
-.TitleBar>li>a span {
-    display: block;
-    line-height: 60px;
-    padding: 0 20px;
-    z-index: 701;
-    white-space: nowrap;
-    border-right-width: 1px;
-    border-style: solid;
-    border-top-style: solid;
-    border-right-style: solid;
-    border-bottom-style: solid;
-    border-left-style: solid;
-}
 
 .TitleBar.Sticky {
     display: none;
@@ -93,6 +110,8 @@
     .Sticky img {
         padding: 20px 30px;
     }
+
+
 }
 
 @media only screen and (max-width: 959px) and (min-width: 768px) {

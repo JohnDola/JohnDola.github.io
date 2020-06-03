@@ -5,6 +5,7 @@ import { sectionTitles, ESection } from '../../common/sectionTitles';
 
 const TitleBar = (props) => {
 	const [ isTransparentTitleBar, setisTransparentTitleBar ] = useState(false);
+	const [ hasAnimate, setHasAnimate ] = useState(false);
 	useEffect(() => {
 		window.addEventListener('scroll', () => {
 			setisTransparentTitleBar(window.scrollY >= 100);
@@ -34,11 +35,22 @@ const TitleBar = (props) => {
 		);
 	});
 	const classList = [ classes.TitleBar, classes.Sticky, isTransparentTitleBar ? classes.FadeIn : null ].join(' ');
+	const hamburgerCls = [ classes.HamburgerMenu, hasAnimate ? classes.Change : null ].join(' ');
 	return (
 		<div className={classes.TitleBar}>
 			<div className={classes.TitleBar}>
 				<img src={logo} alt="logo not found" />
 				<ul>{titleEntries}</ul>
+				<div
+					className={hamburgerCls}
+					onClick={() => {
+						setHasAnimate(!hasAnimate);
+					}}
+				>
+					<div className={classes.Bar1} />
+					<div className={classes.Bar2} />
+					<div className={classes.Bar3} />
+				</div>
 			</div>
 			<div style={{ visibility: isTransparentTitleBar ? 'visible' : 'hidden' }} className={classList}>
 				<ul>
