@@ -5,7 +5,7 @@ import { sectionTitles, ESection } from '../../common/sectionTitles';
 
 const TitleBar = (props) => {
 	const [ isTransparentTitleBar, setisTransparentTitleBar ] = useState(false);
-	const [ hasAnimate, setHasAnimate ] = useState(false);
+	const [ isHamburgerOpen, setIsHamburgerOpen ] = useState(false);
 	useEffect(() => {
 		window.addEventListener('scroll', () => {
 			setisTransparentTitleBar(window.scrollY >= 100);
@@ -35,17 +35,17 @@ const TitleBar = (props) => {
 		);
 	});
 	const classList = [ classes.TitleBar, classes.Sticky, isTransparentTitleBar ? classes.FadeIn : null ].join(' ');
-	const hamburgerCls = [ classes.HamburgerMenu, hasAnimate ? classes.Change : null ].join(' ');
+	const hamburgerCls = [ classes.HamburgerMenu, isHamburgerOpen ? classes.Change : null ].join(' ');
 	return (
 		<div className={classes.TitleBar}>
 			{/* Transparent Title bar todo export me */}
-			<div className={[classes.TitleBar, classes.Fixed].join(' ')}>
+			<div className={[ classes.TitleBar, classes.Fixed ].join(' ')}>
 				<img src={logo} alt="logo not found" />
 				<ul>{titleEntries}</ul>
 				<div
 					className={hamburgerCls}
 					onClick={() => {
-						setHasAnimate(!hasAnimate);
+						setIsHamburgerOpen(!isHamburgerOpen);
 					}}
 				>
 					<div className={classes.Bar1} />
@@ -59,6 +59,12 @@ const TitleBar = (props) => {
 					<img src={logo} alt="logo not found" />
 					{titleEntries}
 				</ul>
+			</div>
+			<div
+				style={{ display: isHamburgerOpen ? 'block' : 'none' }}
+				className={[ classes.Dropdown ].join(' ')}
+			>
+				<ul>{titleEntries}</ul>
 			</div>
 		</div>
 	);

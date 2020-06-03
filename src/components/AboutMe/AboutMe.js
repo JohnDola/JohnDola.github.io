@@ -4,7 +4,7 @@ import { ESection } from '../../common/sectionTitles';
 const AboutMe = (props) => (
 	<section id={ESection.aboutme} className={classes.AboutMe}>
 		{/* TODO <img></img> */}
-        <img className={ classes.ScrollPictureAnimation} src="https://themes.muffingroup.com/be/resume/wp-content/uploads/2015/03/daniel-petterson.png"></img>
+        {/* <img className={ classes.ScrollPictureAnimation} src="https://themes.muffingroup.com/be/resume/wp-content/uploads/2015/03/daniel-petterson.png"></img> */}
 		<div className={classes.JohnDola}>
        
 			<h2>John Marco Dola</h2>

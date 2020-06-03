@@ -1,0 +1,91 @@
+.Contact {
+    background-color: #6f8c84;
+    color: #fff !important;
+    display: flex;
+    padding: 80px
+}
+
+.OneThird {
+    flex: 33%;
+    text-align: right;
+    padding-right: 15px;
+}
+
+.TwoThird {
+    flex: 66%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.Contact input {
+    color: #626262;
+    background-color: rgba(255, 255, 255, 1);
+    border-color: #EBEBEB;
+    box-sizing: border-box;
+    border: none;
+    height: 40px;
+    width: 100%;
+    margin-bottom: 10px;
+    padding: 10px;
+}
+
+.Contact input:first-child,
+.Contact input:first-child+input {
+    width: 49%;
+}
+
+.TwoThird textarea {
+    color: #626262;
+    height: 50px;
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 10px;
+    height: 130px
+}
+
+.Contact button {
+    background-color: black;
+    color: white;
+
+    padding: 10px;
+    border-radius: 5px;
+    border-color: rgba(0, 0, 0, .08)
+}
+
+.OneThird p:first-child {
+    font-size: 25px;
+    margin: 0;
+    margin-bottom: 15px;
+}
+
+.OneThird big {
+    font-size: 15px;
+    font-weight: bold;
+    margin: 0;
+    margin-bottom: 15px;
+}
+
+.SocialMediaGroup {
+    padding: 5px;
+}
+
+.SocialMediaGroup a {
+    background-color: white;
+    width: 40px;
+    margin: 3px;
+    display: inline-block;
+    padding: 5px;
+    height: 40px
+}
+
+.SocialMediaGroup svg {
+    padding: 5px;
+    color: black;
+}
+
+.SocialMediaGroup svg:hover,
+.SocialMediaGroup svg:active {
+    padding: 5px;
+    color: #6f8c84;
+}

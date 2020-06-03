@@ -7,11 +7,11 @@ const ESection = {
     contact: '#contact' 
 }
 const sectionTitles = [
-    { name: 'About Me', hash: ESection.aboutme },
-    { name: 'My Skills', hash: ESection.myskills},
+    { name: 'About', hash: ESection.aboutme },
+    { name: 'Skills', hash: ESection.myskills},
     { name: 'Experience', hash: ESection.experience },
-    { name: 'Portfolio', hash: ESection.portfolio},
-    { name: 'Education', hash: ESection.education},
+    // { name: 'Portfolio', hash: ESection.portfolio},
+    // { name: 'Education', hash: ESection.education},
     { name: 'Contact', hash: ESection.contact }
 ];
 
