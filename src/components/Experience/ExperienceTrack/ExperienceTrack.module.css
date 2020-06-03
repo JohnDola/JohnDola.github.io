@@ -1,3 +1,23 @@
 .ExperienceTrack{
-    
+    display:flex;
+    width: 100%;
+}
+.ExperienceTrack aside{
+    flex: 1 0 20%;
+    display:block;
+    float: left;
+    padding: 10px 5px 3px 5px;
+}
+.ExperienceTrack h4{
+    font-size: 21px;
+    line-height: 25px;
+    font-weight: 300;
+    margin-bottom: 3px;
+
+}
+.Listing ul{
+  display:inline-block;
+  width:45%;
+  height: 250px;
+  float: left;
 }
