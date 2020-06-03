@@ -30,13 +30,13 @@ const Contact = (props) => {
 					</span>
 				</div>
 			</div>
-			<div className={classes.TwoThird}>
+			<form className={classes.TwoThird}>
 				<input type="text" placeholder="Your name" />
-				<input type="text" placeholder="Your e-mail" />
+				<input type="email" placeholder="Your e-mail" />
 				<input type="text" placeholder="Subject" />
 				<textarea type="text" placeholder="Message" />
 				<button type="submit">Send a Message</button>
-			</div>
+			</form>
 		</section>
 	);
 };
