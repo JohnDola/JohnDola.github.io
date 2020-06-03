@@ -11,6 +11,13 @@
     }
 }
 
+@media only screen and (min-width: 1240px) {
+
+    .WebSiteView {
+        max-width: 1240px;
+    }
+}
+
 .WebSiteView {
     margin: 25px auto;
     overflow: hidden;
@@ -23,9 +30,3 @@
 
 }
 
-@media only screen and (min-width: 1240px) {
-
-    .WebSiteView {
-        max-width: 1240px;
-    }
-}

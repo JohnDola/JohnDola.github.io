@@ -8,8 +8,15 @@ const ExperienceTrack = ({ title, responsibilities, description, location, exper
 		</aside>
 		<div className={classes.Listing}>
 			<p>{description}</p>
-			<ul>{responsibilities.map((entry, index) => <li key={index}>{entry}</li>)}</ul>
-			<ul>{experiences.map((entry, index) => <li key={index}>{entry}</li>)}</ul>
+			<div className={classes.Dots}>
+				<span />
+				<span />
+				<span />
+			</div>
+			<ul aria-label="Responsibilities">
+				{responsibilities.map((entry, index) => <li key={index}>{entry}</li>)}
+			</ul>
+			<ul aria-label="Experiences">{experiences.map((entry, index) => <li key={index}>{entry}</li>)}</ul>
 		</div>
 	</div>
 );

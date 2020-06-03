@@ -1,23 +1,137 @@
-.ExperienceTrack{
-    display:flex;
-    width: 100%;
+.ExperienceTrack {
+    display: flex;
+    flex-flow: wrap;
+    width: 90%;
+    margin: auto;
+    padding: 20px 10px
 }
-.ExperienceTrack aside{
-    flex: 1 0 20%;
-    display:block;
+.ExperienceTrack big{
+    font-weight: bold;
+    color:grey;
+}
+.ExperienceTrack aside {
+    display: block;
     float: left;
-    padding: 10px 5px 3px 5px;
+    margin: 0 0 40px;
+    min-width: 400px;
 }
-.ExperienceTrack h4{
+
+.ExperienceTrack h4 {
     font-size: 21px;
     line-height: 25px;
     font-weight: 300;
-    margin-bottom: 3px;
-
+    padding: 0;
+    margin: 0
 }
-.Listing ul{
-  display:inline-block;
-  width:45%;
-  height: 250px;
-  float: left;
+
+.ExperienceTrack p {
+    padding: 0;
+    margin: 0 0 15px;
+    line-height: 1.4;
+}
+
+.Listing {
+    width: 100%;
+}
+
+.Listing ul {
+    display: inline-block;
+    width: 100%;
+    padding:0;
+    float: left;
+}
+
+.Listing li {
+    position: relative;
+    list-style-type: none;
+    padding-left: 50px;
+    margin-bottom: 15px;
+}
+
+.Listing li:before {
+    font-family: "mfn-icons";
+    overflow: hidden;
+    color:#3E3E3E;
+    position: absolute;
+    left: 20px;
+    top: 0;
+    font-size: 17px;
+    content: '\e841';
+}
+
+.Listing ul + ul li:before {
+    font-family: "mfn-icons";
+    overflow: hidden;
+    color:#3E3E3E;
+    position: absolute;
+    left: 20px;
+    top: 0;
+    font-size: 17px;
+    content: '\e927';
+}
+
+.Listing li:after {
+    overflow: hidden;
+    position: absolute;
+    top: 26px;
+    left:0px;
+    font-size: 17px;
+    content: '';
+    height:1px;
+    width: 70px;
+    background:rgba(0,0,0,.08)
+}
+
+.Listing ul li:first-child {
+    margin-top: 12px;
+}
+
+.Listing ul:before {
+    content: attr(aria-label);
+    font-size: 100%;
+    color:grey;
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+
+
+@media only screen and (min-width:  768px) {
+    .ExperienceTrack {
+        width: 100%;
+        margin: unset;
+        padding: 80px 10px
+    }
+
+    .ExperienceTrack aside {
+        margin: 0 1% 40px;
+    }
+
+    .Listing {
+        width: 800px;
+    }
+
+    .Listing ul {
+        display: inline-block;
+        width: 50%;
+        padding:0;
+        height: 250px;
+        float: left;
+    }
+}
+
+.Dots{
+    line-height: 0;
+    width: 90%;
+    padding-left:40%;
+}
+.Dots span{
+    display: inline-block;
+    width: 5px;
+    height: 5px;
+    overflow: hidden;
+    margin: 0 5px;
+    -webkit-border-radius: 5px;
+    border-radius: 5px;
+    color: #000000;
+    background: #000000;
 }

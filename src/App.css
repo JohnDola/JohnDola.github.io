@@ -1,11 +1,13 @@
 
 .App {
   /* font-family: "Roboto", Arial, Tahoma, sans-serif */
+  font-family: "Lato", Arial, Tahoma, sans-serif;
+
   
 }
 
 h2{
-  font-family: "Lato", Arial, Tahoma, sans-serif;
+  /* font-family: "Lato", Arial, Tahoma, sans-serif; */
 }
 
 body{
