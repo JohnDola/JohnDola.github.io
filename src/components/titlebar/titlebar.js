@@ -38,7 +38,8 @@ const TitleBar = (props) => {
 	const hamburgerCls = [ classes.HamburgerMenu, hasAnimate ? classes.Change : null ].join(' ');
 	return (
 		<div className={classes.TitleBar}>
-			<div className={classes.TitleBar}>
+			{/* Transparent Title bar todo export me */}
+			<div className={[classes.TitleBar, classes.Fixed].join(' ')}>
 				<img src={logo} alt="logo not found" />
 				<ul>{titleEntries}</ul>
 				<div
@@ -52,10 +53,10 @@ const TitleBar = (props) => {
 					<div className={classes.Bar3} />
 				</div>
 			</div>
+			{/* Transparent Title bar todo export me */}
 			<div style={{ visibility: isTransparentTitleBar ? 'visible' : 'hidden' }} className={classList}>
 				<ul>
 					<img src={logo} alt="logo not found" />
-
 					{titleEntries}
 				</ul>
 			</div>

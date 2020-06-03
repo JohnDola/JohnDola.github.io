@@ -33,9 +33,8 @@
 
 .Change .Bar3 {
     -webkit-transform: rotate(45deg) translate(-8px, -6px);
-    transform: rotate(45deg)  translate(-8px, -6px)
+    transform: rotate(45deg) translate(-8px, -6px)
 }
-
 
 .TitleBar ul {
     margin: 0;
@@ -43,14 +42,22 @@
 
 .TitleBar li {
     text-decoration: none;
+    display: block;
     padding: 25px 30px;
     list-style-type: none;
     margin: 12px 10px;
     overflow: auto;
-    float: left;
     border-right: 1px solid;
     border-color: rgba(0, 0, 0, .05);
 }
+
+
+
+.TitleBar.Fixed li  {
+    visibility: hidden;
+    display: block;
+}
+
 
 .TitleBar li:last-child {
     border: none;
@@ -111,7 +118,19 @@
         padding: 20px 30px;
     }
 
+    .TitleBar li {
+        display: inline-block;
+    }
 
+    .HamburgerMenu{
+        visibility: hidden;
+    }
+
+
+    .TitleBar.Fixed li  {
+        display: inline-block;
+        visibility: visible;
+    }
 }
 
 @media only screen and (max-width: 959px) and (min-width: 768px) {
