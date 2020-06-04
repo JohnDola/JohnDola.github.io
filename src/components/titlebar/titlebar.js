@@ -27,8 +27,8 @@ const TitleBar = (props) => {
 
 	const titleEntries = sectionTitles.map(({ name, hash }, index) => {
 		return (
-			<li>
-				<a key={index} href={hash} onClick={() => scrollTo(hash)}>
+			<li key={index} >
+				<a href={hash} onClick={() => scrollTo(hash)}>
 					{name}
 				</a>
 			</li>
@@ -60,10 +60,7 @@ const TitleBar = (props) => {
 					{titleEntries}
 				</ul>
 			</div>
-			<div
-				style={{ display: isHamburgerOpen ? 'block' : 'none' }}
-				className={[ classes.Dropdown ].join(' ')}
-			>
+			<div style={{ display: isHamburgerOpen ? 'block' : 'none' }} className={[ classes.Dropdown ].join(' ')}>
 				<ul>{titleEntries}</ul>
 			</div>
 		</div>
